@@ -6,6 +6,16 @@
 
 > A plain-language planning skill for non-technical builders using skills-compatible AI agents.
 
+## 不会安装？复制这段话给你的 Agent
+
+无论你使用 Codex、Claude Code、Cursor、Windsurf、WorkBuddy 或其他 Agent，都可以先把下面整段话复制给它：
+
+```text
+请帮我安装并使用这个开源项目：https://github.com/639happy/cto-skill 。先阅读项目说明，自动判断我现在使用的 Agent 产品，把 CTO Skill 安装到正确位置；如果已经有旧版本，请先备份。完整使用还需要 Superpowers：如果当前平台支持，请检查它是否已经安装并启用；如果没有，请直接帮我安装，遇到必须由我点击或授权的步骤时再告诉我。如果当前平台不能完整支持，请如实说明，不要假装安装成功。最后请实际检查 CTO Skill 能否被识别，并用一句简单的话告诉我以后怎样开始使用。未经我明确同意，不要开始写代码或部署产品。
+```
+
+你不需要先学会命令行，也不用自己判断文件应该放在哪里。Agent 应该先告诉你它准备做什么；遇到登录、安装插件、覆盖文件或其他需要授权的操作时，再由你确认。
+
 ## 它能帮你做什么
 
 CTO Skill 只做三件事：
