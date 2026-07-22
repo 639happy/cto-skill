@@ -1,0 +1,15 @@
+# Internal design and evaluation artifacts are intentionally not published.
+/.superpowers/
+/docs/
+/evals/
+
+# Local environment and editor files.
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
