@@ -1,6 +1,6 @@
 interface:
-  display_name: "CTO 轻量开发总控"
-  short_description: "澄清小型软件需求，按风险补充技术护栏并交接给 Superpowers"
-  default_prompt: "使用 $ctoskill 帮我澄清这个软件项目，并推进到已批准的设计和实施计划。"
+  display_name: "CTO Skill｜把软件想法问清楚"
+  short_description: "帮非技术用户理清需求、提前发现关键风险，并准备好设计和开发计划"
+  default_prompt: "使用 $ctoskill 帮我把这个软件想法问清楚，检查真正需要提前处理的风险，并推进到我能看懂和批准的设计与开发计划。"
 policy:
   allow_implicit_invocation: false
