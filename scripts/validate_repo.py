@@ -21,6 +21,7 @@ REQUIRED_FILES = (
     SKILL_DIR / "references" / "context-and-adr.md",
     SKILL_DIR / "references" / "cto-brief-template.md",
     SKILL_DIR / "references" / "risk-triggers.md",
+    SKILL_DIR / "references" / "superpowers-handoff.md",
 )
 
 BLOCKED_PUBLIC_DIRECTORIES = ("/.superpowers/", "/docs/", "/evals/")
@@ -61,12 +62,33 @@ for reference in re.findall(r"\]\((references/[^)]+\.md)\)", skill_text):
 
 openai_text = (SKILL_DIR / "agents" / "openai.yaml").read_text(encoding="utf-8")
 for required_text in (
-    'display_name: "CTO 轻量开发总控"',
+    'display_name: "CTO Skill｜把软件想法问清楚"',
     "使用 $ctoskill",
     "allow_implicit_invocation: false",
 ):
     if required_text not in openai_text:
         fail(f"openai.yaml is missing: {required_text}")
+
+plain_language_blocklist = (
+    "轻量外层编排器",
+    "Intake 合同",
+    "Handoff 与返回合同",
+    "triggered risk preflight",
+    "Phase 0",
+    "canonical",
+    "幂等",
+    "readiness review",
+)
+for blocked_term in plain_language_blocklist:
+    if blocked_term in skill_text:
+        fail(f"SKILL.md contains unexplained developer wording: {blocked_term}")
+
+readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
+for platform_name in ("Codex", "Claude Code", "Cursor", "Windsurf", "WorkBuddy"):
+    if platform_name not in readme_text:
+        fail(f"README.md is missing platform guidance: {platform_name}")
+if "Agent Skills 格式" not in readme_text:
+    fail("README.md must explain the portable Agent Skills core")
 
 gitignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
 for blocked_directory in BLOCKED_PUBLIC_DIRECTORIES:

@@ -1,6 +1,6 @@
 # Third-party notices
 
-CTO Skill is an independent project. It does not vendor or redistribute the upstream Skill files listed below, but it adapts workflow concepts from Grill With Docs and interoperates with Superpowers. Their notices are included here for clear attribution.
+CTO Skill is an independent project. It does not copy or redistribute the upstream Skill files listed below. It adapts workflow ideas from Grill With Docs and passes confirmed work to Superpowers. Their notices are included here for clear attribution.
 
 ## Grill With Docs
 
@@ -35,7 +35,7 @@ SOFTWARE.
 ## Superpowers
 
 - Project: [obra/superpowers](https://github.com/obra/superpowers)
-- Interoperability: `superpowers:brainstorming` and `superpowers:writing-plans`
+- Skills used by the full workflow: `brainstorming` and `writing-plans`
 - License: [MIT](https://github.com/obra/superpowers/blob/main/LICENSE)
 
 ```text
@@ -62,4 +62,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-The names and links above are used only to identify upstream projects and explain compatibility. No affiliation or endorsement is implied.
+The names and links above only identify the original projects and explain how CTO Skill works with them. No affiliation or endorsement is implied.

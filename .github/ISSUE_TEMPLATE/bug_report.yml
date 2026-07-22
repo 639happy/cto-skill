@@ -11,15 +11,15 @@ body:
     id: environment
     attributes:
       label: 运行环境
-      description: Codex App/CLI、Superpowers 版本和操作系统
-      placeholder: Codex App, Superpowers 6.1.1, macOS
+      description: 使用的 Agent 产品、Superpowers 版本和操作系统
+      placeholder: Claude Code, Superpowers 6.x, macOS
     validations:
       required: true
   - type: textarea
     id: request
     attributes:
-      label: 触发方式与任务
-      description: 请提供脱敏后的显式调用和任务描述
+      label: 怎样开始使用，以及交给它的任务
+      description: 请提供脱敏后的调用方式和任务描述
     validations:
       required: true
   - type: textarea
@@ -37,7 +37,7 @@ body:
   - type: textarea
     id: evidence
     attributes:
-      label: 可复现证据
-      description: 提供脱敏日志、产物路径或最小复现步骤
+      label: 怎样重复看到这个问题
+      description: 提供脱敏后的提示信息、产物路径或最短操作步骤
     validations:
       required: true
